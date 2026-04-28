@@ -188,9 +188,9 @@ GROQ_API_KEY = "your_groq_api_key_here"
 
 ```txt
 streamlit
-langchain-groq
-langchain-core
+groq
 python-dotenv
+langchain-groq
 ```
 
 ---
