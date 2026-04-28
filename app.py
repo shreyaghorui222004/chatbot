@@ -1,7 +1,7 @@
 import streamlit as st
 from main import get_response
 
-st.set_page_config(page_title="AI Chatbot", layout="centered")
+st.set_page_config(page_title="MediBot", layout="centered")
 st.title("AI Chatbot")
 
 
