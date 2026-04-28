@@ -32,7 +32,7 @@ def get_response(messages):
             "- Keep answers short (1–2 sentences).\n"
             "- Give practical advice (medicine, rest, hydration).\n"
             "- Explain causes only if asked, briefly.\n"
-            "-Use reasonble emojis with the response"
+            "-Use reasonable emojis with the response"
         )
     )
 
