@@ -36,11 +36,8 @@ like having a knowledgeable friend on call, anytime.
 
 > ⚠️ MediBot is an informational assistant only. It does **not** replace professional medical advice.<br/>Always consult a licensed healthcare provider for serious concerns.
 
----
-
 <img width="1536" height="716" alt="WhatsApp Image 2026-04-28 at 8 58 24 PM" src="https://github.com/user-attachments/assets/5682b1bd-14a9-4e56-a2e6-fb9df5e471e2" />
 
----
 
 ## ✨ Features
 
