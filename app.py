@@ -99,8 +99,8 @@ if user_input:
     #         reply = fixed
     #     else:
     #         #
-    #         response = get_response(st.session_state.messages)
-    #         reply = response.strip().split(".")[0] + "."
+    response = get_response(st.session_state.messages)
+    reply = response.strip().split(".")[0] + "."
 
    
     st.session_state.messages.append({
