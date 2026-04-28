@@ -3,7 +3,7 @@ from main import get_response
 
 st.set_page_config(page_title="Groq Chatbot", layout="centered")
 
-st.title("Groq AI Chatbot")
+st.title("AI Chatbot")
 
 
 if "messages" not in st.session_state:
