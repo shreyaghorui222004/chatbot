@@ -208,12 +208,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
-## 👩‍💻 Author
-
-**Shreya Ghorui** — Created MediBot as a conversational AI health assistant project.
-
----
-
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
