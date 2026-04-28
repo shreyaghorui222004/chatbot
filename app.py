@@ -5,40 +5,40 @@ st.set_page_config(page_title="AI Chatbot", layout="centered")
 st.title("AI Chatbot")
 
 
-def is_medical_query(text):
-    text = text.lower()
-
-    medical_keywords = [
-        "fever", "headache", "pain", "dizzy",
-        "cold", "cough", "weak", "weakness",
-        "nausea", "vomit", "vomiting",
-        "sore", "throat", "fatigue",
-        "temperature", "chills"
-    ]
-
-    for keyword in medical_keywords:
-        if keyword in text:
-            return True
-
-    return False
-
-
-def get_fixed_response(text):
-    text = text.lower()
-
-    if "cold" in text or "cough" in text:
-        return "Paracetamol or a cough syrup can help relieve symptoms."
-
-    if "fever" in text:
-        return "Paracetamol or ibuprofen can help reduce fever."
-
-    if "headache" in text:
-        return "Paracetamol can help relieve headache."
-
-    if "weak" in text or "weakness" in text:
-        return "Rest and stay hydrated; eat light nutritious food."
-
-    return None
+# def is_medical_query(text):
+#     text = text.lower()
+#
+#     medical_keywords = [
+#         "fever", "headache", "pain", "dizzy",
+#         "cold", "cough", "weak", "weakness",
+#         "nausea", "vomit", "vomiting",
+#         "sore", "throat", "fatigue",
+#         "temperature", "chills"
+#     ]
+#
+#     for keyword in medical_keywords:
+#         if keyword in text:
+#             return True
+#
+#     return False
+#
+#
+# def get_fixed_response(text):
+#     text = text.lower()
+#
+#     if "cold" in text or "cough" in text:
+#         return "Paracetamol or a cough syrup can help relieve symptoms."
+#
+#     if "fever" in text:
+#         return "Paracetamol or ibuprofen can help reduce fever."
+#
+#     if "headache" in text:
+#         return "Paracetamol can help relieve headache."
+#
+#     if "weak" in text or "weakness" in text:
+#         return "Rest and stay hydrated; eat light nutritious food."
+#
+#     return None
 
 
 
@@ -46,7 +46,6 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "assistant", "content": "Hello, I am a medical assistant. How can I help you?"}
     ]
-
 
 
 st.markdown("""
@@ -81,8 +80,6 @@ user_input = st.chat_input("Type your message...")
 
 
 if user_input:
-    user_text = user_input.lower()
-
     
     st.session_state.messages.append({
         "role": "user",
@@ -90,20 +87,22 @@ if user_input:
     })
 
     
-    if not is_medical_query(user_text):
-        reply = "Please ask medical questions only."
+    # if not is_medical_query(user_text):
+    #     reply = "Please ask medical questions only."
+    #
+    # else:
+    #
+    #     fixed = get_fixed_response(user_text)
+    #
+    #     if fixed:
+    #         reply = fixed
+    #     else:
+    #         #
+    #         response = get_response(st.session_state.messages)
+    #         reply = response.strip().split(".")[0] + "."
 
-    else:
-        
-        fixed = get_fixed_response(user_text)
-
-        if fixed:
-            reply = fixed
-        else:
-            #
-            response = get_response(st.session_state.messages)
-            reply = response.strip().split(".")[0] + "."
-
+    response = get_response(st.session_state.messages)
+    reply = response.strip()
    
     st.session_state.messages.append({
         "role": "assistant",
