@@ -2,12 +2,13 @@ from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from dotenv import load_dotenv
+import streamlit as st
 import os
 
 load_dotenv()
 
 llm = ChatGroq(
-    groq_api_key=os.getenv("GROQ_API_KEY"),
+    groq_api_key=os.getenv("GROQ_API_KEY") or st.secrets["GROQ_API_KEY"],
     model_name="llama-3.1-8b-instant",
     temperature=0.5
 )
